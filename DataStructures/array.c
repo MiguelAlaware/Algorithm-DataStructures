@@ -5,5 +5,5 @@ int main() {
     array[0] = 07;
     array[1] = 03;
     array[2] = 2007;
-    printf("%i", array);
+    printf("%i", array[1]); 
 }
