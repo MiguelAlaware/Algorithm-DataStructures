@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
-int search(int *array, int low, int high, int ne)
+#define SIZEOF(array) sizeof(array) / sizeof(*arr)
+
+int search(int array[], int ne, int high, int low)
 {
+  
    do { 
         int mid = floor((low + (high - low) / 2));
         int value = array[mid];
@@ -20,10 +23,17 @@ int search(int *array, int low, int high, int ne)
             low = mid + 1;
         }
     } while(low < high); 
-    return 1;
+    
+    return 0;
 }
 
 int main()
 {
-    search();
+    int neddle = 5;
+    int array[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int low = 0;
+    int high = sizeof(array) / sizeof(array[0]);
+    int result = search(array, neddle, high, low);
+    printf("%d", result);
 }
+
