@@ -24,7 +24,7 @@ int search(int array[], int ne, int high, int low)
         }
     } while(low < high); 
     
-    return 0;
+    return -1;
 }
 
 int main()
